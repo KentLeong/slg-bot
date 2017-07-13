@@ -5,7 +5,7 @@
   "season": 1,
   "prefix": ".",
   "token": "MzA0Mjg0MjIzNjk3NTg0MTI5.DBqJIQ.9iNGhJ8XqIigm0UBcin9mg76SzA",
-  "db":"localhost:3000",
+  "db":"192.168.1.151:3000",
   "admin": ["255942275442409472"],
   "staff": ["255942275442409472", "304646770942541825"],
   "commands": [
