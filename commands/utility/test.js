@@ -15,7 +15,7 @@ exports.run = (client, msg, args) => {
     if (found) {
       msg.reply("```successfully found game```")
     } else {
-      msg.reply("```failed to find game```")
+      msg.reply("failed to find game")
     }
   })
 };
