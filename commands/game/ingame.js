@@ -20,7 +20,7 @@ exports.run = (client, msg, args) => {
               if (msg.author.id != room.host) {
                 msg.reply("youre not the host of this game")
               } else {
-                rhost.startSpec("26503645", found => {
+                rhost.startSpec(msg.author.id, "26503645", found => {
                   if (found) {
                     msg.guild.channels.find("name", text_channel).send("```successfully found game```")
                   } else {

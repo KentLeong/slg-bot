@@ -86,7 +86,6 @@ module.exports = {
           value.sort((a,b) => {
             return parseFloat(b.slg_elo) - parseFloat(a.slg_elo)
           })
-
           blueTeam.sort((a,b) => {
             return a.index - b.index
           })
@@ -154,24 +153,20 @@ module.exports = {
               ladder.elo, "\n",
               "--------------------------------------------------------------\n"].join("").split(",").join("")
             if (room.red_team.includes(user.discord_id)) {
-              room.red_team.forEach((z,index) => {
-                redTeam.push({
-                  index: index+1,
-                  id: user.discord_id,
-                  rank_elo: user.elo,
-                  slg_slo: ladder.elo,
-                  info: b
-                })
+              redTeam.push({
+                index: room.red_team.indexOf(user.discord_id)+1,
+                id: user.discord_id,
+                rank_elo: user.elo,
+                slg_slo: ladder.elo,
+                info: b
               })
             } else if (room.blue_team.includes(user.discord_id)) {
-              room.blue_team.forEach((z,index) => {
-                blueTeam.push({
-                  index: index+1,
-                  id: user.discord_id,
-                  rank_elo: user.elo,
-                  slg_slo: ladder.elo,
-                  info: b
-                })
+              blueTeam.push({
+                index: room.blue_team.indexOf(user.discord_id)+1,
+                id: user.discord_id,
+                rank_elo: user.elo,
+                slg_slo: ladder.elo,
+                info: b
               })
             } else {
               value.push({

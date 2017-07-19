@@ -217,8 +217,8 @@ module.exports = {
       .then(data => {callback()})
       .catch(err => {console.log(err)})
   },
-  startSpec(host, callback) {
-    rp(`http://${config.db}/riot/match/na1/spectate/${host}`)
+  startSpec(host, sumID, callback) {
+    rp(`http://${config.db}/riot/match/na1/spectate/${sumID}`)
       .then(data => {
         var game = JSON.parse(data)
         var options = {
